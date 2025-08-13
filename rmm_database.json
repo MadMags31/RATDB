@@ -1,0 +1,879 @@
+﻿{
+    "database_info":  {
+                          "version":  "1.0",
+                          "last_updated":  "2025-08-08",
+                          "total_entries":  28
+                      },
+    "rmm_tools":  [
+                      {
+                          "name":  "NinjaRMM",
+                          "vendor":  "NinjaOne",
+                          "risk_level":  "authorized",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "NinjaRMMAgent.exe",
+                                                                         "NinjaRMMService.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "NinjaRMM Agent",
+                                                                        "NinjaRMM Service"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\NinjaRMM",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\NinjaRMM"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\NinjaRMM",
+                                                                                  "C:\\Program Files (x86)\\NinjaRMM"
+                                                                              ],
+                                                       "files":  [
+                                                                     "NinjaRMMAgent.exe",
+                                                                     "NinjaRMMService.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "NinjaRMM Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "AnyDesk",
+                          "vendor":  "AnyDesk Software GmbH",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "AnyDesk.exe",
+                                                                         "AnyDesk_Service.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "AnyDesk Service",
+                                                                        "AnyDesk",
+                                                                        "AnyDeskMSI"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\AnyDesk",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\AnyDesk",
+                                                                             "HKCU\\SOFTWARE\\AnyDesk",
+                                                                             "HKLM\\SYSTEM\\CurrentControlSet\\Services\\AnyDesk",
+                                                                             "HKEY_CLASSES_ROOT\\.anydesk",
+                                                                             "HKLM\\SOFTWARE\\Clients\\Media\\AnyDesk"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\AnyDesk",
+                                                                                  "C:\\Program Files (x86)\\AnyDesk",
+                                                                                  "C:\\Users\\*\\AppData\\Local\\AnyDesk",
+                                                                                  "C:\\Users\\*\\AppData\\Roaming\\AnyDesk"
+                                                                              ],
+                                                       "files":  [
+                                                                     "AnyDesk.exe",
+                                                                     "AnyDesk_Service.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "AnyDesk",
+                                                   "uninstall_string":  "C:\\Program Files\\AnyDesk\\AnyDesk.exe --remove",
+                                                   "quiet_uninstall":  "C:\\Program Files\\AnyDesk\\AnyDesk.exe --remove --silent"
+                                               }
+                      },
+                      {
+                          "name":  "TeamViewer",
+                          "vendor":  "TeamViewer AG",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "TeamViewer.exe",
+                                                                         "TeamViewer_Service.exe",
+                                                                         "tv_w32.exe",
+                                                                         "tv_x64.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "TeamViewer",
+                                                                        "TeamViewer7"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\TeamViewer",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\TeamViewer",
+                                                                             "HKCU\\SOFTWARE\\TeamViewer",
+                                                                             "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\TeamViewer"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\TeamViewer",
+                                                                                  "C:\\Program Files (x86)\\TeamViewer"
+                                                                              ],
+                                                       "files":  [
+                                                                     "TeamViewer.exe",
+                                                                     "TeamViewer_Service.exe",
+                                                                     "uninstall.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "TeamViewer",
+                                                   "uninstall_string":  "C:\\Program Files (x86)\\TeamViewer\\uninstall.exe",
+                                                   "quiet_uninstall":  "C:\\Program Files (x86)\\TeamViewer\\uninstall.exe /S"
+                                               }
+                      },
+                      {
+                          "name":  "TacticalRMM",
+                          "vendor":  "Tactical RMM",
+                          "risk_level":  "unauthorized",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "tacticalrmm.exe",
+                                                                         "tacticalagent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "tacticalrmm",
+                                                                        "tacticalagent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\TacticalRMM",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\TacticalRMM"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\TacticalAgent",
+                                                                                  "C:\\Program Files (x86)\\TacticalAgent"
+                                                                              ],
+                                                       "files":  [
+                                                                     "tacticalrmm.exe",
+                                                                     "tacticalagent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Tactical RMM Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "SimpleHelp",
+                          "vendor":  "Simple Help Software",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "SimpleHelp-RemoteAccess.exe",
+                                                                         "SimpleHelp.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "SimpleHelp Remote Access"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\SimpleHelp",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\SimpleHelp"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\SimpleHelp",
+                                                                                  "C:\\Program Files (x86)\\SimpleHelp"
+                                                                              ],
+                                                       "files":  [
+                                                                     "SimpleHelp-RemoteAccess.exe",
+                                                                     "SimpleHelp.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "SimpleHelp Remote Access",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "DattoRMM",
+                          "vendor":  "Datto Inc",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "CagService.exe",
+                                                                         "RmmService.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Datto RMM",
+                                                                        "CagService"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\CentraStage",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\CentraStage"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\CentraStage",
+                                                                                  "C:\\Program Files (x86)\\CentraStage"
+                                                                              ],
+                                                       "files":  [
+                                                                     "CagService.exe",
+                                                                     "RmmService.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Datto RMM",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "ScreenConnect",
+                          "vendor":  "ConnectWise LLC",
+                          "risk_level":  "authorized",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "ScreenConnect.ClientService.exe",
+                                                                         "ScreenConnect.WindowsClient.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "ScreenConnect Client"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\ScreenConnect Client",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\ScreenConnect Client"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\ScreenConnect Client",
+                                                                                  "C:\\Program Files (x86)\\ScreenConnect Client"
+                                                                              ],
+                                                       "files":  [
+                                                                     "ScreenConnect.ClientService.exe",
+                                                                     "ScreenConnect.WindowsClient.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "ScreenConnect Client",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "ConnectWise Control",
+                          "vendor":  "ConnectWise LLC",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "ConnectWiseControl.Client.exe",
+                                                                         "ConnectWiseControl.ClientService.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "ConnectWise Control Client"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\ConnectWise\\Control",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\ConnectWise\\Control"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\ConnectWise\\Control",
+                                                                                  "C:\\Program Files (x86)\\ConnectWise\\Control"
+                                                                              ],
+                                                       "files":  [
+                                                                     "ConnectWiseControl.Client.exe",
+                                                                     "ConnectWiseControl.ClientService.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "ConnectWise Control Client",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Kaseya VSA",
+                          "vendor":  "Kaseya Limited",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "AgentMon.exe",
+                                                                         "KaseyaAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Kaseya Agent",
+                                                                        "Kaseya Agent Monitor"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Kaseya",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Kaseya"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Kaseya",
+                                                                                  "C:\\Program Files (x86)\\Kaseya"
+                                                                              ],
+                                                       "files":  [
+                                                                     "AgentMon.exe",
+                                                                     "KaseyaAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Kaseya Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Naverisk",
+                          "vendor":  "Naverisk",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "NaveriskAgent.exe",
+                                                                         "NaveriskService.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Naverisk Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Naverisk",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Naverisk"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Naverisk",
+                                                                                  "C:\\Program Files (x86)\\Naverisk"
+                                                                              ],
+                                                       "files":  [
+                                                                     "NaveriskAgent.exe",
+                                                                     "NaveriskService.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Naverisk Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Servoyant",
+                          "vendor":  "Servoyant",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "ServoyantAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Servoyant Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Servoyant",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Servoyant"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Servoyant",
+                                                                                  "C:\\Program Files (x86)\\Servoyant"
+                                                                              ],
+                                                       "files":  [
+                                                                     "ServoyantAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Servoyant Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "MSP360 RMM",
+                          "vendor":  "MSP360",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "MSP360Agent.exe",
+                                                                         "RMMAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "MSP360 RMM Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\MSP360",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\MSP360"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\MSP360",
+                                                                                  "C:\\Program Files (x86)\\MSP360"
+                                                                              ],
+                                                       "files":  [
+                                                                     "MSP360Agent.exe",
+                                                                     "RMMAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "MSP360 RMM Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Panorama9",
+                          "vendor":  "Panorama9",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "Panorama9Agent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Panorama9 Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Panorama9",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Panorama9"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Panorama9",
+                                                                                  "C:\\Program Files (x86)\\Panorama9"
+                                                                              ],
+                                                       "files":  [
+                                                                     "Panorama9Agent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Panorama9 Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Lansweeper",
+                          "vendor":  "Lansweeper",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "LSAgent.exe",
+                                                                         "LansweeperAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Lansweeper Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Lansweeper",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Lansweeper"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Lansweeper",
+                                                                                  "C:\\Program Files (x86)\\Lansweeper"
+                                                                              ],
+                                                       "files":  [
+                                                                     "LSAgent.exe",
+                                                                     "LansweeperAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Lansweeper Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Level",
+                          "vendor":  "Level",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "LevelAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Level Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Level",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Level"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Level",
+                                                                                  "C:\\Program Files (x86)\\Level"
+                                                                              ],
+                                                       "files":  [
+                                                                     "LevelAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Level Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Kabuto",
+                          "vendor":  "Kabuto",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "KabutoAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Kabuto Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Kabuto",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Kabuto"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Kabuto",
+                                                                                  "C:\\Program Files (x86)\\Kabuto"
+                                                                              ],
+                                                       "files":  [
+                                                                     "KabutoAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Kabuto Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Syncro",
+                          "vendor":  "Syncro MSP",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "SyncroAgent.exe",
+                                                                         "SyncroService.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Syncro"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\RepairShopr",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\RepairShopr",
+                                                                             "HKLM\\SOFTWARE\\Syncro",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Syncro"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\RepairShopr",
+                                                                                  "C:\\Program Files (x86)\\RepairShopr",
+                                                                                  "C:\\Program Files\\Syncro",
+                                                                                  "C:\\Program Files (x86)\\Syncro"
+                                                                              ],
+                                                       "files":  [
+                                                                     "SyncroAgent.exe",
+                                                                     "SyncroService.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Syncro",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "GoTo Resolve",
+                          "vendor":  "GoTo Technologies USA LLC",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "GoToResolve.exe",
+                                                                         "g2ax_service.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "GoTo Resolve"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\GoTo",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\GoTo"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\GoTo",
+                                                                                  "C:\\Program Files (x86)\\GoTo"
+                                                                              ],
+                                                       "files":  [
+                                                                     "GoToResolve.exe",
+                                                                     "g2ax_service.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "GoTo Resolve",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Continuum",
+                          "vendor":  "ConnectWise LLC",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "LabTechService.exe",
+                                                                         "LTSvcMon.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "LabTech Software"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\LabTech",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\LabTech"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\LabTech Client",
+                                                                                  "C:\\Program Files (x86)\\LabTech Client"
+                                                                              ],
+                                                       "files":  [
+                                                                     "LabTechService.exe",
+                                                                     "LTSvcMon.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "LabTech Software",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "SysAid",
+                          "vendor":  "SysAid Technologies Ltd",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "SysAidAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "SysAid Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\SysAid",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\SysAid"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\SysAid",
+                                                                                  "C:\\Program Files (x86)\\SysAid"
+                                                                              ],
+                                                       "files":  [
+                                                                     "SysAidAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "SysAid Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Pulseway",
+                          "vendor":  "Pulseway Ltd",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "Pulseway.exe",
+                                                                         "PulsewayAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Pulseway"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\MMSOFT Design\\PC Monitor",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\MMSOFT Design\\PC Monitor"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\MMSOFT Design\\PC Monitor",
+                                                                                  "C:\\Program Files (x86)\\MMSOFT Design\\PC Monitor"
+                                                                              ],
+                                                       "files":  [
+                                                                     "Pulseway.exe",
+                                                                     "PulsewayAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Pulseway",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Opsview",
+                          "vendor":  "Opsview Ltd",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "OpsviewAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Opsview Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Opsview",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Opsview"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Opsview",
+                                                                                  "C:\\Program Files (x86)\\Opsview"
+                                                                              ],
+                                                       "files":  [
+                                                                     "OpsviewAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Opsview Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Atera",
+                          "vendor":  "Atera Networks Ltd",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "AteraAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "AteraAgent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\ATERA Networks",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\ATERA Networks"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\ATERA Networks",
+                                                                                  "C:\\Program Files (x86)\\ATERA Networks"
+                                                                              ],
+                                                       "files":  [
+                                                                     "AteraAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Atera Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Rippling IT",
+                          "vendor":  "Rippling",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "RipplingAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Rippling Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Rippling",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Rippling"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Rippling",
+                                                                                  "C:\\Program Files (x86)\\Rippling"
+                                                                              ],
+                                                       "files":  [
+                                                                     "RipplingAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Rippling Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Domotz Pro",
+                          "vendor":  "Domotz Ltd",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "DomotzAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Domotz Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Domotz",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Domotz"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Domotz",
+                                                                                  "C:\\Program Files (x86)\\Domotz"
+                                                                              ],
+                                                       "files":  [
+                                                                     "DomotzAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Domotz Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "LogMeIn",
+                          "vendor":  "LogMeIn Inc",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "LogMeIn.exe",
+                                                                         "LogMeInSystray.exe",
+                                                                         "ramaint.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "LogMeIn"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\LogMeIn",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\LogMeIn"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\LogMeIn",
+                                                                                  "C:\\Program Files (x86)\\LogMeIn"
+                                                                              ],
+                                                       "files":  [
+                                                                     "LogMeIn.exe",
+                                                                     "LogMeInSystray.exe",
+                                                                     "ramaint.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "LogMeIn",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Zabbix",
+                          "vendor":  "Zabbix SIA",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "zabbix_agentd.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "Zabbix Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\Zabbix",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\Zabbix"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\Zabbix Agent",
+                                                                                  "C:\\Program Files (x86)\\Zabbix Agent"
+                                                                              ],
+                                                       "files":  [
+                                                                     "zabbix_agentd.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "Zabbix Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      },
+                      {
+                          "name":  "Optitune",
+                          "vendor":  "Bravura Software LLC",
+                          "risk_level":  "suspicious",
+                          "detection_signatures":  {
+                                                       "processes":  [
+                                                                         "OptiTuneAgent.exe"
+                                                                     ],
+                                                       "services":  [
+                                                                        "OptiTune Agent"
+                                                                    ],
+                                                       "registry_keys":  [
+                                                                             "HKLM\\SOFTWARE\\OptiTune",
+                                                                             "HKLM\\SOFTWARE\\WOW6432Node\\OptiTune"
+                                                                         ],
+                                                       "installation_paths":  [
+                                                                                  "C:\\Program Files\\OptiTune",
+                                                                                  "C:\\Program Files (x86)\\OptiTune"
+                                                                              ],
+                                                       "files":  [
+                                                                     "OptiTuneAgent.exe"
+                                                                 ]
+                                                   },
+                          "uninstaller_info":  {
+                                                   "display_name":  "OptiTune Agent",
+                                                   "uninstall_string":  "msiexec /x {ProductCode}",
+                                                   "quiet_uninstall":  "msiexec /x {ProductCode} /quiet"
+                                               }
+                      }
+                  ]
+}
